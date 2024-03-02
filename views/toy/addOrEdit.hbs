@@ -1,0 +1,36 @@
+<h1 style="bold">Add Toy</h1>
+<form action="/toy" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{toy._id}}">
+    <div class="form-group">
+        <label>Toy name:</label>
+        <input type="text" class="form-control" name="fullName" value="{{toy.fullName}}" placeholder="Enter name">
+        <div class="text-danger">
+            {{toy.fullNameError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Price:</label>
+        <input type="text" class="form-control" name="email" value="{{toy.email}}" placeholder="Enter price">
+        <div class="text-danger">
+            {{toy.emailError}}
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group md-6">
+            <label>Description:</label>
+            <input type="text" name="mobile" placeholder="Enter description" value="{{toy.mobile}}" class="form-control">
+
+        </div>
+        <div class="form-group md-6">
+            <label>Amount:</label>
+            <input type="text" name="city" placeholder="Enter amount" value="{{toy.city}}" class="form-control">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-warning"> Confirm</button>
+        <a href="/toy/list" class="btn btn-warning">
+             List All Toy
+        </a>
+    </div>
+</form>
