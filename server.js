@@ -10,7 +10,7 @@ var app = express();
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-
+// mã hoá để gửi đi
 app.use(bodyParser.json());
 app.set('views', path.join(__dirname, '/views/')) // thư mục chứa các file views (giao diện người dùng)
 app.use(express.static(__dirname + '/public')); // Chứa các files tĩnh

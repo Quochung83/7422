@@ -86,7 +86,9 @@ router.get('/:id', (req, res) => {
 router.get('/delete/:id', (req, res) => {
     Toy.findByIdAndRemove(req.params.id, (err, doc) => {
         if (!err) {
+            console.log("delete...");
             res.redirect('/toy/list');
+
         }
         else {
             console.log("An error occured during the Delete Process" + err);
